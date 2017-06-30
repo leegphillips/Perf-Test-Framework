@@ -1,0 +1,90 @@
+{
+    "Id":"6224802688",
+    "OriginalOrderId":"CRC59202469",
+    "Source":"Test",
+    "TimeStamp":"2017-06-24 00:00:00.104",
+    "CustomerViewingCurrency":"GBP",
+    "OrderCurrency":"GBP",
+    "ExchangeRate":1.0,
+    "OrderAmount":13.49,
+    "OrderDiscount":0.0,
+    "PromotionList":null,
+    "Customer":{
+        "Id":"5585582111117",
+        "ContactNumber":"12345670895",
+        "EmailAddress":"Aksana_Buivaliak7@epam.com"
+    },
+    "BillingAddress":{
+        "FirstName":"Aksana",
+        "Surname":"Buivaliak",
+        "AddressLine1":"3 Lesney",
+        "AddressLine2":"Avenue",
+        "City":"London",
+        "County":"Ship County",
+        "Country":"United Kingdom",
+        "PostCode":"BT010011"
+    },
+    "ShippingAddress":{
+        "CollectionPointId":"12345",
+        "MobileNumber":"12345678955",
+        "FirstName":"Aksana",
+        "Surname":"Buivaliak",
+        "AddressLine1":"3 Lesney",
+        "AddressLine2":"Avenue",
+        "City":"London",
+        "County":"Ship County",
+        "Country":"United Kingdom",
+        "PostCode":"bbb100171"
+    },
+    "Shipping":{
+        "Cost":0.0,
+        "Method":"COLLECTPLUS",
+        "DutyPaid":0.0,
+        "ShippingSLA":"COLLECTPLUS",
+        "CollectionProvider":"CollectionProvider",
+        "CollectionService":"CollectionService"
+    },
+    "PaymentDetails":[
+        {
+            "CreditCard":null,
+            "BankTransfer":null,
+            "PayPal":null,
+            "GiftCertificates":[
+                {
+                    "Id":"d56gnjkd2",
+                    "PaymentAmount":13.49
+                }
+            ],
+            "Braintree":null,
+            "Finance":null,
+            "CycleScheme":null,
+            "FreeOfCharge":null,
+            "OnAccount":null,
+            "ChequeCashDraft":null
+        }
+    ],
+    "Items":[
+        {
+            "ReferenceSKU":"5310010104",
+            "Status":"INITIAL",
+            "ItemPromotions":null,
+            "IsKit":"false",
+            "KitType":null,
+            "KitItems":null,
+            "OrderDetailId":6251392791,
+            "VATCode":"UK-Ze",
+            "KitReferenceLineId":null,
+            "ReferenceLineId":"1231111111",
+            "GroupStockId":5310010104,
+            "Quantity":1,
+            "UnitPrice":13.49,
+            "TotalPrice":13.49,
+            "PriceBeforeDiscount":18.0,
+            "UnitCostExVAT":11.24,
+            "CountryVATRate":0.2,
+            "UnitVATAmt":2.25,
+            "TotalItemCostExVAT":11.24,
+            "TotalItemVAT":2.25
+        }
+    ]
+}

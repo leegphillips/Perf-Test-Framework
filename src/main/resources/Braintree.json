@@ -1,0 +1,107 @@
+{
+  "OriginalOrderId":"CRC59312490",
+  "Source":"Test",
+  "TimeStamp":"2017-06-22 11:09:02.629",
+  "CustomerViewingCurrency":"GBP",
+  "OrderCurrency":"GBP",
+  "ExchangeRate":1.0,
+  "OrderAmount":137.49,
+  "OrderDiscount":0.0,
+  "PromotionList":null,
+  "Customer":{
+    "Id":"5585592111117",
+    "ContactNumber":"12345670895",
+    "EmailAddress":"Lee.Phillips@epam.com"
+  },
+  "BillingAddress":{
+    "FirstName":"Lee",
+    "Surname":"Phillips",
+    "AddressLine1":"119 Benton Road",
+    "AddressLine2":null,
+    "City":"NEWCASTLE UPON TYNE",
+    "County":"Tyne and Wear",
+    "Country":"United Kingdom",
+    "PostCode":"NE7 7DT"
+  },
+  "ShippingAddress":{
+    "CollectionPointId":null,
+    "MobileNumber":"12345678955",
+    "FirstName":"Lee",
+    "Surname":"Phillips",
+    "AddressLine1":"119 Benton Road",
+    "AddressLine2":"",
+    "City":"NEWCASTLE UPON TYNE",
+    "County":"Tyne and Wear",
+    "Country":"United Kingdom",
+    "PostCode":"NE7 7DT"
+  },
+  "Shipping":{
+    "Cost":0.0,
+    "Method":"Standard Tracked Delivery 3-4 Days",
+    "DutyPaid":0.0,
+    "ShippingSLA":"STANDARD",
+    "CollectionProvider":"CollectionProvider",
+    "CollectionService":"CollectionService"
+  },
+  "PaymentDetails":[
+    {
+      "CreditCard":null,
+      "BankTransfer":null,
+      "PayPal":null,
+      "GiftCertificates":null,
+      "Braintree":{
+        "Transaction":{
+          "Id":"l88y8300",
+          "PaymentAmount":179.09,
+          "Currency":"GBP",
+          "MerchantAccountId":"ChainReactionCyclesGBP",
+          "Status":"SUBMITTED_FOR_SETTLEMENT"
+        },
+        "BraintreeCard":{
+          "Token":"token",
+          "CardType":"Visa",
+          "CardHolderName":"AksanaBuivaliak",
+          "MaskedNumber":"123456******1234",
+          "CountryOfIssuance":"GBR",
+          "IssuingBank":"Barclays Bank PLC",
+          "CreatedAtTimestamp":"2017-06-19 23:06:04.657"
+        },
+        "BraintreeFraudIndicators":{
+          "CvvResponseCode":"1",
+          "AvsStreetAddressResponseCode":"1",
+          "AvsPostalCodeResponseCode":"2",
+          "AvsErrorResponseCode":"3"
+        }
+      },
+      "Finance":null,
+      "CycleScheme":null,
+      "FreeOfCharge":null,
+      "OnAccount":null,
+      "ChequeCashDraft":null
+    }
+  ],
+  "Items":[
+    {
+      "ReferenceSKU":"107036",
+      "Status":"INITIAL",
+      "ItemPromotions":null,
+      "IsKit":"false",
+      "KitType":null,
+      "KitItems":null,
+      "OrderDetailId":6251393097,
+      "VATCode":null,
+      "KitReferenceLineId":null,
+      "ReferenceLineId":"12345",
+      "GroupStockId":107036,
+      "Quantity":1,
+      "UnitPrice":1.09,
+      "TotalPrice":179.09,
+      "PriceBeforeDiscount":18.0,
+      "UnitCostExVAT":298.35,
+      "CountryVATRate":0.2,
+      "UnitVATAmt":298.35,
+      "TotalItemCostExVAT":1.83,
+      "TotalItemVAT":0.37
+    }
+  ]
+}
