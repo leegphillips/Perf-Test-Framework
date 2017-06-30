@@ -29,8 +29,8 @@ public class PerfApplicationTests {
     @Value(value = "classpath:Braintree.json")
     private Resource braintree;
 
-//    @Test
-//    public void simpleOrder() throws IOException, ApiException {
+    @Test
+    public void simpleOrder() throws IOException, ApiException {
 //        PerfTest perfTest = new PerfTest();
 //        for (int i = 0; i < 5; i++) {
 //            Order order = new OrderFactory().create(braintree);
@@ -38,5 +38,5 @@ public class PerfApplicationTests {
 //            perfTest.addOrder(order);
 //        }
 //        this.perfTestRepository.save(perfTest);
-//    }
+    }
 }
