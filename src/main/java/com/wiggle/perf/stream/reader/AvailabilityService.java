@@ -15,10 +15,10 @@ public class AvailabilityService extends AbstractStreamReader {
     private static final Log logger = LogFactory.getLog(AvailabilityService.class);
 
     @Autowired
-    private AvailabilityRepository repo;
+    AvailabilityRepository repo;
 
     @Autowired
-    private Connection connection;
+    Connection connection;
 
     @Scheduled(fixedDelay = 100)
     public void scan() throws InterruptedException {
