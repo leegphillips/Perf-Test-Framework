@@ -1,17 +1,9 @@
 package com.wiggle.perf;
 
 import io.swagger.client.ApiException;
-import io.swagger.client.JSON;
-import io.swagger.client.api.AvailibilityApi;
-import io.swagger.client.model.InlineResponse2001;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
-
-import java.util.Collections;
-import java.util.Properties;
 
 @SpringBootApplication
 @EnableScheduling
