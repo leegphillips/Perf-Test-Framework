@@ -1,4 +1,4 @@
-package com.wiggle.perf.streamReader;
+package com.wiggle.perf.stream.reader;
 
 import io.swagger.client.ApiException;
 import org.apache.commons.logging.Log;

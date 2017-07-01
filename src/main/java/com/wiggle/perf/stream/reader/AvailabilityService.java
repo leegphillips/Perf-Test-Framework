@@ -1,4 +1,4 @@
-package com.wiggle.perf.streamReader;
+package com.wiggle.perf.stream.reader;
 
 import com.wiggle.perf.Connection;
 import com.wiggle.perf.repository.AvailabilityRepository;
