@@ -1,4 +1,4 @@
-package com.wiggle.perf.streamReader;
+package com.wiggle.perf.stream.reader;
 
 import io.swagger.client.ApiException;
 import org.apache.commons.logging.Log;
@@ -9,7 +9,7 @@ public abstract class AbstractStreamReader {
 
     private static final String MARKER = "from=";
 
-    long from = 0;
+    protected long from = 0;
 
     protected void doScan(Class<?> aClass) throws InterruptedException {
         try {
