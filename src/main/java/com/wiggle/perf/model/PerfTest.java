@@ -1,8 +1,6 @@
 package com.wiggle.perf.model;
 
-import com.google.gson.annotations.SerializedName;
 import io.swagger.client.model.Order;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.hateoas.ResourceSupport;
 

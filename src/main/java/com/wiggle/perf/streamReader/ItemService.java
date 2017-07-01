@@ -4,7 +4,6 @@ import com.wiggle.perf.Connection;
 import com.wiggle.perf.repository.ItemRepository;
 import io.swagger.client.ApiException;
 import io.swagger.client.model.InlineResponse2002;
-import io.swagger.client.model.InlineResponse2002Page;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;

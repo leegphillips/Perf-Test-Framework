@@ -4,9 +4,7 @@ import io.swagger.client.ApiClient;
 import io.swagger.client.api.AvailibilityApi;
 import io.swagger.client.api.ItemsApi;
 import io.swagger.client.api.OrdersApi;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
