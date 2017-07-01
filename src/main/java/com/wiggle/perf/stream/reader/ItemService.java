@@ -15,10 +15,10 @@ public class ItemService extends AbstractStreamReader {
     private static final Log logger = LogFactory.getLog(ItemService.class);;
 
     @Autowired
-    private ItemRepository repo;
+    ItemRepository repo;
 
     @Autowired
-    private Connection connection;
+    Connection connection;
 
     @Scheduled(fixedDelay = 100)
     public void scan() throws InterruptedException {
