@@ -9,7 +9,7 @@ public abstract class AbstractStreamReader {
 
     private static final String MARKER = "from=";
 
-    long from = 0;
+    protected long from = 0;
 
     protected void doScan(Class<?> aClass) throws InterruptedException {
         try {
