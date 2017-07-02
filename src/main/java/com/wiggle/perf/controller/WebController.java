@@ -1,6 +1,7 @@
 package com.wiggle.perf.controller;
 
 import com.wiggle.perf.Connection;
+import com.wiggle.perf.OrderService;
 import com.wiggle.perf.model.OrderFactory;
 import com.wiggle.perf.model.PerfTest;
 import com.wiggle.perf.repository.OrderEventRepository;
@@ -16,13 +17,18 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RestController
 public class WebController {
+
+    @Autowired
+    private OrderService orderService;
 
     @Autowired
     private PerfTestRepository testsRepo;
@@ -75,14 +81,16 @@ public class WebController {
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public void createPerfTest(HttpServletResponse response, @ModelAttribute("count") int count) throws IOException, ApiException {
+    public void createPerfTest(HttpServletResponse response, @ModelAttribute("count") int count) throws IOException, ApiException, InterruptedException {
         PerfTest perfTest = new PerfTest();
+        List<CompletableFuture<Object>> posts = new ArrayList<>();
         for (int i = 0; i < count; i++) {
             Order order = new OrderFactory().create(braintree);
-            Object o = connection.getOrdersApi().ordersPost(order);
+            posts.add(orderService.post(order));
             perfTest.addOrder(order);
         }
         this.testsRepo.save(perfTest);
+        CompletableFuture.allOf(posts.toArray(new CompletableFuture[posts.size()]));
         response.sendRedirect("/test/" + perfTest.getTestId());
     }
 

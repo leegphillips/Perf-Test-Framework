@@ -5,7 +5,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 public abstract class AbstractStreamReader {
-    private static final Log logger = LogFactory.getLog(AbstractStreamReader.class);;
+    private static final Log logger = LogFactory.getLog(AbstractStreamReader.class);
 
     private static final String MARKER = "from=";
 

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ItemService extends AbstractStreamReader {
-    private static final Log logger = LogFactory.getLog(ItemService.class);;
+    private static final Log logger = LogFactory.getLog(ItemService.class);
 
     @Autowired
     ItemRepository repo;
