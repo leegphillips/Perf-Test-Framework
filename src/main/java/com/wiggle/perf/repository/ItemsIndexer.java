@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ItemsIndexer extends AbstractMongoEventListener<InlineResponse2002Page> {
-    private static final Log logger = LogFactory.getLog(ItemsIndexer.class);;
+    private static final Log logger = LogFactory.getLog(ItemsIndexer.class);
 
     @Override
     public void onBeforeConvert(BeforeConvertEvent<InlineResponse2002Page> event) {
