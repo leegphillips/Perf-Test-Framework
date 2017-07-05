@@ -14,11 +14,14 @@ import org.springframework.stereotype.Service;
 public class ItemService extends AbstractStreamReader {
     private static final Log logger = LogFactory.getLog(ItemService.class);
 
-    @Autowired
-    ItemRepository repo;
+    final private ItemRepository repo;
+    final private Connection connection;
 
     @Autowired
-    Connection connection;
+    public ItemService(ItemRepository repo, Connection connection) {
+        this.repo = repo;
+        this.connection = connection;
+    }
 
     @Scheduled(fixedDelay = 100)
     public void scan() throws InterruptedException {

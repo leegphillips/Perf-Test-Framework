@@ -1,37 +1,45 @@
 package com.wiggle.perf.stream.reader;
 
 import com.wiggle.perf.Connection;
+import com.wiggle.perf.PerfApplication;
 import com.wiggle.perf.repository.ItemRepository;
-import io.swagger.client.ApiException;
 import io.swagger.client.api.ItemsApi;
 import io.swagger.client.model.InlineResponse2002;
 import io.swagger.client.model.InlineResponse2002Page;
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.mockito.Mockito.*;
 
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = {PerfApplication.class})
 public class ItemServiceTest {
-    ItemService test = new ItemService();
 
-    @Before
-    public void before() {
-        test.connection = mock(Connection.class);
-        test.repo = mock(ItemRepository.class);
-    }
+    @Mock
+    private ItemRepository itemRepository;
+
+    @Mock
+    private Connection connection;
 
     @Test
-    public void testProcess() throws ApiException {
-        ItemsApi api = mock(ItemsApi.class);
-        List<InlineResponse2002Page> items = Collections.singletonList(mock(InlineResponse2002Page.class));
-        InlineResponse2002 response = new InlineResponse2002();
-        response.setPage(items);
-        when(api.itemsGet(0L, 50)).thenReturn(response);
-        when(test.connection.getItemsApi()).thenReturn(api);
-        test.process();
-        verify(test.repo).save(items);
+    public void testProcess() throws Exception {
+        final ItemsApi api = mock(ItemsApi.class);
+        final InlineResponse2002 response = mock(InlineResponse2002.class);
+        final List<InlineResponse2002Page> responsePage = Arrays.asList(mock(InlineResponse2002Page.class));
+        final ItemService itemService = new ItemService(itemRepository, connection);
+        when(connection.getItemsApi()).thenReturn(api);
+        when(api.itemsGet(anyLong(), anyInt())).thenReturn(response);
+        when(response.getPage()).thenReturn(responsePage);
+        itemService.process();
+        verify(connection).getItemsApi();
+        verify(api).itemsGet(anyLong(), anyInt());
+        verify(response).getPage();
+        verify(itemRepository).save(responsePage);
     }
 }
